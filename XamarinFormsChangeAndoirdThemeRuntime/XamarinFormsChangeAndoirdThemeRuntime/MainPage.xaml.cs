@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace XamarinFormsChangeAndoirdThemeRuntime
@@ -12,6 +8,22 @@ namespace XamarinFormsChangeAndoirdThemeRuntime
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void MainThemeButton_Clicked(object sender, EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() => 
+            {
+                GlobalEvents.OnAndroidThemeChangeNeeded_Event(null, GlobalVariables.MainThemeResourceID);
+            });
+        }
+
+        private void MainTransparentButton_Clicked(object sender, EventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                GlobalEvents.OnAndroidThemeChangeNeeded_Event(null, GlobalVariables.MainTransparentThemeResourceID);
+            });
         }
     }
 }

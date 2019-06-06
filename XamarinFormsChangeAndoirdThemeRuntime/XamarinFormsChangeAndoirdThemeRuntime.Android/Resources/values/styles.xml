@@ -24,6 +24,22 @@
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
   </style>
 
+    <style name="MainCianBlueTheme.Base" parent="MainTheme">
+    <item name="android:colorPressedHighlight">@color/anlistviewSelection</item>
+    <item name="android:colorLongPressedHighlight">@color/anlistviewSelection</item>
+    <item name="android:colorFocusedHighlight">@color/anlistviewSelection</item>
+    <item name="android:colorActivatedHighlight">@color/anlistviewSelection</item>
+    <item name="android:activatedBackgroundIndicator">@color/anlistviewSelection</item>
+  </style>
+
+  <style name="MainTransparentTheme.Base" parent="MainTheme">
+    <item name="android:colorPressedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:colorLongPressedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:colorFocusedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:colorActivatedHighlight">@color/transparentlistviewSelection</item>
+    <item name="android:activatedBackgroundIndicator">@color/transparentlistviewSelection</item>
+  </style>
+  
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>

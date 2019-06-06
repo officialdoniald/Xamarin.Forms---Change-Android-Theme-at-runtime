@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XamarinFormsChangeAndoirdThemeRuntime"
              x:Class="XamarinFormsChangeAndoirdThemeRuntime.MainPage">
-
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button x:Name="mainThemeButton" 
+                Clicked="MainThemeButton_Clicked" 
+                Text="MainTheme"/>
+        <Button x:Name="mainTransparentButton" 
+                Clicked="MainTransparentButton_Clicked" 
+                Text="TransparentTheme"/>
     </StackLayout>
-
 </ContentPage>

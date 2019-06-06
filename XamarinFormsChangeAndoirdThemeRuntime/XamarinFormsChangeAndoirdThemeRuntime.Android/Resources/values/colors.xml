@@ -4,4 +4,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+  <color name="anlistviewSelection">#40E0D0</color>
+  <color name="transparentlistviewSelection">#00000000</color>
 </resources>

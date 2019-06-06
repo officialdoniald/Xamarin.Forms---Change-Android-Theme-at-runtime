@@ -1,10 +1,5 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace XamarinFormsChangeAndoirdThemeRuntime.Droid
@@ -19,7 +14,19 @@ namespace XamarinFormsChangeAndoirdThemeRuntime.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            GlobalVariables.MainThemeResourceID = Resource.Style.MainTheme;
+            GlobalVariables.MainTransparentThemeResourceID = Resource.Style.MainTransparentTheme_Base;
+            GlobalEvents.OnAndroidThemeChangeNeeded += GlobalEvents_OnAndroidThemeChangeNeeded; ;
+
             LoadApplication(new App());
+        }
+
+        private void GlobalEvents_OnAndroidThemeChangeNeeded(object sender, int themeid)
+        {
+            RunOnUiThread(() => {
+                SetTheme(themeid);
+            });
         }
     }
 }
